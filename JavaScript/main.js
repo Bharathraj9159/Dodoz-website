@@ -81,3 +81,11 @@ function logout(){
     setupUI();
 }
 setupUI();
+
+
+const links = document.querySelectorAll('menu ul li a');
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add('active');
+    }
+});

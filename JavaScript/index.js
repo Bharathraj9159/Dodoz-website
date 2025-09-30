@@ -87,6 +87,8 @@ function displayTrendingProducts(trendingProducts){
         </div>
     </div>`
     }
+
+  
     
 document.querySelector(".top_products .products").innerHTML = content;
 let addToCartLinks = document.querySelectorAll('.addToCart');
