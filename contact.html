@@ -97,6 +97,61 @@
 
     </style>
 
+    
+    <!-- WhatsApp Order Notice Marquee -->
+<div class="marquee-container">
+  <div class="marquee-content">
+    📢 We're currently accepting orders via WhatsApp only — Thank you for your understanding!
+  </div>
+</div>
+
+<style>
+  .marquee-container {
+    width: 100%;
+    background: linear-gradient(90deg, #075E54 0%, #128C7E 100%);
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    position: relative;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 100%;
+    animation: smooth-marquee 15s linear infinite;
+  }
+
+  @keyframes smooth-marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .marquee-content {
+      font-size: 14px;
+      animation-duration: 12s;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .marquee-content {
+      font-size: 13px;
+      animation-duration: 10s;
+    }
+  }
+</style>
+
     <!-- Contact Info Row -->
 <section class="contact-section contact-info-row">
   <div class="contact-info-container">
@@ -507,6 +562,13 @@
 
 </style>
 
+     
+<!-- WhatsApp Order Notice Marquee -->
+<div class="marquee-container">
+  <div class="marquee-content">
+    📢 We're currently accepting orders via WhatsApp only — Thank you for your understanding!
+  </div>
+</div>
 
 
 <footer class="footer">
