@@ -84,7 +84,170 @@
     </nav>
   </header>
 
+     
+<!-- WhatsApp Order Notice Marquee -->
+<div class="marquee-container">
+  <div class="marquee-content">
+    📢 We're currently accepting orders via WhatsApp only — Thank you for your understanding!
+  </div>
+</div>
+
+<style>
+  .marquee-container {
+    width: 100%;
+    background: linear-gradient(90deg, #075E54 0%, #128C7E 100%);
+    color: #fff;
+    overflow: hidden;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    position: relative;
+  }
+
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 100%;
+    animation: smooth-marquee 15s linear infinite;
+  }
+
+  @keyframes smooth-marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .marquee-content {
+      font-size: 14px;
+      animation-duration: 12s;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .marquee-content {
+      font-size: 13px;
+      animation-duration: 10s;
+    }
+  }
+</style>
+
+
+
  <main>
+
+<!-- Back to Shop Button -->
+<div class="back-btn-container">
+  <button class="back-btn" onclick="goBack()">
+    <!-- Back arrow SVG icon -->
+    <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    Back to Shop
+  </button>
+</div>
+
+<script>
+  function goBack() {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      window.location.href = "index.html"; // fallback page
+    }
+  }
+</script>
+
+<style>
+  .back-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* left corner */
+    padding: 15px 20px;
+  }
+
+  .back-btn {
+    background: #1e1e1e; /* dark background */
+    color: #f1f1f1;      /* light text */
+    border: 2px solid #333;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 0.8s forwards;
+  }
+
+  .back-btn:hover {
+    background: linear-gradient(90deg, #333, #555);
+    color: #fff;
+    transform: translateX(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .back-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+
+  .back-icon {
+    display: inline-block;
+    vertical-align: middle;
+    stroke: #f1f1f1;
+    transition: transform 0.3s ease;
+  }
+
+  .back-btn:hover .back-icon {
+    transform: translateX(-2px);
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .back-btn-container {
+      padding: 10px 15px;
+    }
+
+    .back-btn {
+      font-size: 14px;
+      padding: 8px 20px;
+      gap: 8px;
+    }
+
+    .back-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+</style>
+
+
+
+  
  <div class="container">
   <div class="productDetails">
     <div class="images">
@@ -210,6 +373,13 @@ document.addEventListener("keydown", (e) => {
 }
 </style>
 
+     
+<!-- WhatsApp Order Notice Marquee -->
+<div class="marquee-container">
+  <div class="marquee-content">
+    📢 We're currently accepting orders via WhatsApp only — Thank you for your understanding!
+  </div>
+</div>
 
 <footer class="footer">
   <div class="footer-top footer-center">
